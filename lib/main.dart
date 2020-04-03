@@ -29,7 +29,7 @@ class _KitHomePageState extends State<KitHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('flutter  qukit'),
+        title: Text('flutter qukit'),
       ),
       body: Center(
         child: Column(
