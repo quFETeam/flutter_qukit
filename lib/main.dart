@@ -31,23 +31,74 @@ class _KitHomePageState extends State<KitHomePage> {
       appBar: AppBar(
         title: Text('flutter qukit'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body:Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: AssetImage('lib/images/wuming_01.jpeg'),
+          )
+        ),
+        child: ListView(
+          padding: EdgeInsets.only(left: 38,right: 38),
           children: <Widget>[
-            InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => GradientButtonRoute(),
-                ));
-              },
-              child: Text(
-                'GradientButton',
-              )
-            )
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
+            Button(
+              text: 'GradientButton',
+              routeName: GradientButtonRoute(),
+            ),
           ],
         ),
       )
     );
+  }
+}
+
+class Button extends StatelessWidget {
+  final String text;
+  final Widget routeName;
+  Button({Key key,
+    this.text,this.routeName
+}): super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      color: Colors.cyan.withOpacity(0.8),
+        onPressed: (){
+         Navigator.push(context,
+             MaterialPageRoute(builder: (context) => routeName,
+             )
+         );
+      },
+        child:Text(text,style: TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 18
+        ),));
   }
 }
