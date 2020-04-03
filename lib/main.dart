@@ -10,7 +10,7 @@ class KitApp extends StatelessWidget {
     return MaterialApp(
       title: 'flutter qukit',
       theme: ThemeData(
-        primarySwatch: Colors.cyan,
+        primarySwatch: Colors.amber,
       ),
       home: KitHomePage(),
     );
