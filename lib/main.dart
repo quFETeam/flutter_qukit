@@ -75,7 +75,7 @@ class _KitHomePageState extends State<KitHomePage> {
             ),
           ],
         ),
-      )
+      ),
     );
   }
 }
@@ -98,7 +98,8 @@ class Button extends StatelessWidget {
       },
         child:Text(text,style: TextStyle(
           fontWeight: FontWeight.w700,
-          fontSize: 18
-        ),));
+          fontSize: 17,
+        ),),
+    );
   }
 }
