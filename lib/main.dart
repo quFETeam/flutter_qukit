@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'example/gradient_button.dart';
-
+import 'example/offline.dart';
 void main() => runApp(KitApp());
 
 class KitApp extends StatelessWidget {
@@ -46,8 +46,8 @@ class _KitHomePageState extends State<KitHomePage> {
               routeName: GradientButtonRoute(),
             ),
             Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
+              text: 'Offline',
+              routeName: Offline(),
             ),
             Button(
               text: 'GradientButton',
