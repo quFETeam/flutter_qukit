@@ -1,7 +1,24 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'example/gradient_button.dart';
+import 'package:flutter/services.dart';
+import 'package:flutterqukit/example/qy_appbar.dart';
+import 'package:flutterqukit/global/qy_colors.dart';
+import 'example/qy_button.dart';
 import 'example/offline.dart';
-void main() => runApp(KitApp());
+void main() {
+  runApp(KitApp());
+  //强制竖屏
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
+  if (Platform.isAndroid) {
+    SystemUiOverlayStyle systemUiOverlayStyle =
+    SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+  }
+}
 
 class KitApp extends StatelessWidget {
 
@@ -28,13 +45,17 @@ class _KitHomePageState extends State<KitHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('flutter qukit'),
-      ),
+      appBar:PreferredSize(
+          child: QYAppBar(
+            title: 'Flutter Qukit',
+            isCenterTitle: true,
+            haveLeftButton: false,
+            appBarColor: QYColors.theme,
+          ), preferredSize: Size.fromHeight(44)),
       body:Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            fit: BoxFit.fill,
+            fit: BoxFit.fitHeight,
             image: AssetImage('lib/images/wuming_01.jpeg'),
           )
         ),
@@ -42,37 +63,14 @@ class _KitHomePageState extends State<KitHomePage> {
           padding: EdgeInsets.only(left: 38,right: 38),
           children: <Widget>[
             Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
+              text: 'QYButton',
+              routeName: QYButton(),
             ),
             Button(
               text: 'Offline',
               routeName: Offline(),
             ),
-            Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
-            ),
-            Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
-            ),
-            Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
-            ),
-            Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
-            ),
-            Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
-            ),
-            Button(
-              text: 'GradientButton',
-              routeName: GradientButtonRoute(),
-            ),
+
           ],
         ),
       ),
