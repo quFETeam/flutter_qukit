@@ -17,6 +17,11 @@ class QYScreen{
     _bottomBarHeight = _mediaQueryData.padding.bottom;
   }
 
+  static double T(BuildContext context){
+    MediaQueryData mediaQuery = MediaQuery.of(context);
+    return mediaQuery.padding.top;
+  }
+
   static double X(BuildContext context){
     MediaQueryData mediaQuery = MediaQuery.of(context);
     _mediaQueryData = mediaQuery;
@@ -43,6 +48,7 @@ class QYScreen{
 
   /// 状态栏高度 dp 刘海屏会更高
   /// The offset from the top
+
   static double get statusBarHeight => _statusBarHeight;
 
   /// 底部安全区距离 dp

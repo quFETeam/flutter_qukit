@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import '../global/qy_colors.dart';
 import '../util/qy_screen.dart';
-
+/*
+* 本片封装的appBar 开发时发现没个页面的appBar差不多一样，
+* 用法:
+* appBar: PreferredSize(
+          child: QYAppBar(
+            title: 'QYButton',
+          ),
+          preferredSize:Size.fromHeight(44)),
+* */
 class QYAppBar extends StatelessWidget {
-  final String title;
-  final bool bottomColor;
-  final bool isCenterTitle;
-  final bool haveLeftButton;
-  final Color appBarColor;
+  final String title; //标题
+  final bool bottomColor;//底部的边
+  final bool isCenterTitle;//是否居中
+  final bool haveLeftButton;//是否有左侧的返回小图标
+  final Color appBarColor;//appBarr的背景色
   QYAppBar({Key key,
     this.title='',
     this.bottomColor=true,
@@ -39,7 +47,8 @@ class QYAppBar extends StatelessWidget {
               Navigator.pop(context);
             },
             child:Container(
-              padding: EdgeInsets.all(10.5),
+              color: appBarColor,
+              padding: EdgeInsets.all(13.5),
               child: Image.asset('lib/images/bar_back.png'),
             )
         ):null,

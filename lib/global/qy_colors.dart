@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class QYColors{
   //主题色
-  static Color theme = Colors.cyan;
+  static Color theme = Color(0xFFFFE001);
 
   //黑色
   static Color black = Color(0xFF333333);
@@ -12,6 +12,9 @@ class QYColors{
 
   //文本字体的灰色
   static Color grey = Color(0xFFB2B2B2);
+
+  //分割线的颜色
+  static Color divider = Colors.grey[100];
 
   //背景色
   static Color backgroundColor = Color(0xFFF8F8F8);
