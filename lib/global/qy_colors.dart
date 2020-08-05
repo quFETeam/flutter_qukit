@@ -34,5 +34,7 @@ class QYColors{
   //橘色
   static Color orange = Color(0xFFFF8900);
 
+  //按钮颜色
+  static Color primaryColor = Color(0xFFFFE001);
 
 }

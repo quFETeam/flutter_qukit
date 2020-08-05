@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutterqukit/global/qy_colors.dart';
 import 'package:flutterqukit/util/qy_screen.dart';
-import 'example/qy_button.dart';
+import 'example/button.dart';
 import 'example/qy_no_network.dart';
 import 'example/qy_text.dart';
 import 'example/qy_banner.dart';
@@ -69,7 +69,7 @@ class _KitHomePageState extends State<KitHomePage> {
             child: ListView(
               padding: EdgeInsets.only(left: 15*X,right: 15*X,top: 44*X+T),
               children: <Widget>[
-                _itemView('QYButton',QYButton()),
+                _itemView('QYButton',Button()),
                 _itemView('QYText',QYText()),
                 _itemView('QYBanner',QYBanner()),
                 _itemView('QYNoNetwork',QYNoNetwork1()),
