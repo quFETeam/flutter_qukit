@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutterqukit/global/qy_colors.dart';
-import 'package:flutterqukit/util/qy_screen.dart';
+import 'package:flutterqukit/util/qu_screen.dart';
 import 'example/button.dart';
 import 'example/qy_no_network.dart';
 import 'example/qy_text.dart';
@@ -47,8 +47,8 @@ class _KitHomePageState extends State<KitHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double X = QYScreen.X(context);
-    double T = QYScreen.T(context);
+    double X = QuScreen.X(context);
+    double T = QuScreen.T(context);
     return Scaffold(
       body:Stack(
         children: <Widget>[
@@ -95,7 +95,7 @@ class _KitHomePageState extends State<KitHomePage> {
   }
 
   Widget _itemView(String text,Widget routeName){
-    double X = QYScreen.X(context);
+    double X = QuScreen.X(context);
     return GestureDetector(
       onTap: (){
         Navigator.push(context,

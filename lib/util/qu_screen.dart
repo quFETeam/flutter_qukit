@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class QYScreen{
+class QuScreen{
   static MediaQueryData _mediaQueryData;
   static double _screenWidth;
   static double _screenHeight;

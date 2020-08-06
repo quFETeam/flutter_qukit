@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../global/qy_colors.dart';
-import '../util/qy_screen.dart';
+import '../util/qu_screen.dart';
 import 'qy_appbar.dart';
 
 /*
@@ -10,7 +10,7 @@ import 'qy_appbar.dart';
 class QYText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double X = QYScreen.X(context);
+    double X = QuScreen.X(context);
     //这里介绍一个计算文本宽度的方法
     Size _getTextSize(String text, TextStyle style) {
       final TextPainter textPainter = TextPainter(

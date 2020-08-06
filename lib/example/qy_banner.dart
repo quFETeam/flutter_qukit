@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-import '../util/qy_screen.dart';
+import '../util/qu_screen.dart';
 import '../global/qy_colors.dart';
 import 'qy_appbar.dart';
 
@@ -18,7 +18,7 @@ class QYBanner extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    double X  = QYScreen.X(context);
+    double X  = QuScreen.X(context);
    return Scaffold(
      backgroundColor: QYColors.backgroundColor,
       appBar: PreferredSize(
@@ -103,7 +103,7 @@ class Protagonist extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    double X = QYScreen.X(context);
+    double X = QuScreen.X(context);
     if(imgList.length>0){
       return Container(
         width: bannerWidth*X, height:bannerHeight*X,

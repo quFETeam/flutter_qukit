@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../util/qy_screen.dart';
+import '../util/qu_screen.dart';
 
-class QyButton extends StatelessWidget {
+class QuButton extends StatelessWidget {
   final double width;
   final double height;
   final double borderRadius;
@@ -19,7 +19,7 @@ class QyButton extends StatelessWidget {
   final bool active;
   final GestureTapCallback onTap;
 
-  QyButton(
+  QuButton(
       {Key key,
       this.width = 295,
       this.height = 48,
@@ -45,7 +45,7 @@ class QyButton extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    double X = QYScreen.X(context);
+    double X = QuScreen.X(context);
     return GestureDetector(
       onTap: _onTap,
       child: Container(

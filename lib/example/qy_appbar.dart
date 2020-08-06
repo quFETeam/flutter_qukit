@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../global/qy_colors.dart';
-import '../util/qy_screen.dart';
+import '../util/qu_screen.dart';
 /*
 * 本片封装的appBar 开发时发现没个页面的appBar差不多一样，
 * 用法:
@@ -25,7 +25,7 @@ class QYAppBar extends StatelessWidget {
   }): super(key: key);
   @override
   Widget build(BuildContext context) {
-    double X =QYScreen.X(context);
+    double X =QuScreen.X(context);
     return Container(
       decoration: BoxDecoration(
           border:Border(bottom: BorderSide(width: 1.0*X,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../global/qy_colors.dart';
-import '../util/qy_screen.dart';
+import '../util/qu_screen.dart';
 import 'qy_appbar.dart';
 /*
 本篇介绍的是 app中常见的骨架loading，
