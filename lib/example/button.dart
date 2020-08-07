@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../global/qy_colors.dart';
+import '../global/qu_colors.dart';
 import '../util/qu_screen.dart';
 import '../src/qu_button.dart';
 import 'qy_appbar.dart';
@@ -16,7 +16,7 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     double X = QuScreen.X(context);
     return Scaffold(
-      backgroundColor: QYColors.backgroundColor,
+      backgroundColor: QuColors.backgroundColor,
       appBar: PreferredSize(
           child: QYAppBar(
             title: 'QuButton',

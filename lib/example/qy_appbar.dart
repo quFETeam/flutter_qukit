@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../global/qy_colors.dart';
+import '../global/qu_colors.dart';
 import '../util/qu_screen.dart';
 /*
 * 本片封装的appBar 开发时发现没个页面的appBar差不多一样，
@@ -29,7 +29,7 @@ class QYAppBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           border:Border(bottom: BorderSide(width: 1.0*X,
-            color: bottomColor?Colors.grey[50]:QYColors.white,
+            color: bottomColor?Colors.grey[50]:QuColors.white,
           ),)
       ),
       child:AppBar(
@@ -40,7 +40,7 @@ class QYAppBar extends StatelessWidget {
         centerTitle:isCenterTitle,
         title: Text(title,style: TextStyle(
           fontSize: 17*X,
-          color: QYColors.black,
+          color: QuColors.black,
         ),),
         leading:haveLeftButton? InkWell(
             onTap: () {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:connectivity/connectivity.dart';
-import '../global/qy_colors.dart';
+import '../global/qu_colors.dart';
 import 'qy_appbar.dart';
 
 class QYNoNetwork1 extends StatelessWidget {
@@ -20,7 +20,7 @@ class QYNoNetwork1 extends StatelessWidget {
           ) {
         if (connectivity == ConnectivityResult.none) {
           return Container(
-            color: QYColors.white,
+            color: QuColors.white,
             child: Center(
               child: Text(
                 "现在没网了，请重新加载",

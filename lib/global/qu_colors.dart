@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
-class QYColors{
+class QuColors{
   //主题色
   static Color theme = Color(0xFFFFE001);
-
+  //fontColor
+  static Color fontPrimaryColor = Color(0xFF333333);
+  static Color fontNormalColor = Color(0xFF666666);
+  static Color fontLightColor = Color(0xFF999999);
+  static Color fontLightColorX = Color(0xFFB6B6B8);
+  //btnColor
+  static Color btnDisabledColor = Color(0xFFF8F8F8);
+  //弹窗背景色
+  static Color popBakColor = Color(0x80000000);
   //黑色
   static Color black = Color(0xFF333333);
 

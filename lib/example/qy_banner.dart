@@ -3,7 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import '../util/qu_screen.dart';
-import '../global/qy_colors.dart';
+import '../global/qu_colors.dart';
 import 'qy_appbar.dart';
 
 /*
@@ -20,7 +20,7 @@ class QYBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     double X  = QuScreen.X(context);
    return Scaffold(
-     backgroundColor: QYColors.backgroundColor,
+     backgroundColor: QuColors.backgroundColor,
       appBar: PreferredSize(
           child: QYAppBar(
             title: 'QYBanner',
@@ -35,7 +35,7 @@ class QYBanner extends StatelessWidget {
             imgList: imgList,
             bannerHeight: 198*X,
             bannerWidth: double.maxFinite,
-            shadowColor: QYColors.backgroundColor,
+            shadowColor: QuColors.backgroundColor,
           ),
           SizedBox(
             width: double.maxFinite,
@@ -45,7 +45,7 @@ class QYBanner extends StatelessWidget {
             imgList: imgList,
             bannerHeight: 198*X,
             bannerWidth: double.maxFinite,
-            shadowColor: QYColors.backgroundColor,
+            shadowColor: QuColors.backgroundColor,
             isShowThreeImg: true,
           ),
           SizedBox(
@@ -56,7 +56,7 @@ class QYBanner extends StatelessWidget {
             imgList: imgList,
             bannerHeight: 198*X,
             bannerWidth: double.maxFinite,
-            shadowColor: QYColors.theme,
+            shadowColor: QuColors.theme,
             isShowThreeImg: true,
             bannerRadius: 5,
           ),
@@ -131,9 +131,9 @@ class Protagonist extends StatelessWidget {
               builder: DotSwiperPaginationBuilder(
                   size: 7,
                   space: 4,
-                  color: QYColors.grey,
+                  color: QuColors.grey,
                   activeSize: 7,
-                  activeColor:QYColors.white
+                  activeColor:QuColors.white
               )
           ),
         ),

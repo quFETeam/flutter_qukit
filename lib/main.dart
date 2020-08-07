@@ -2,10 +2,11 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './global/qy_colors.dart';
+import './global/qu_colors.dart';
 import './util/qu_screen.dart';
 import 'example/button.dart';
 import 'example/skeleton.dart';
+import 'example/my_dialog.dart';
 import 'example/qy_no_network.dart';
 import 'example/qy_text.dart';
 import 'example/qy_banner.dart';
@@ -66,12 +67,13 @@ class _KitHomePageState extends State<KitHomePage> {
           Container(
             width: double.maxFinite,
             height: double.maxFinite,
-            color: QYColors.white.withOpacity(0.8),
+            color: QuColors.white.withOpacity(0.8),
             child: ListView(
               padding: EdgeInsets.only(left: 15*X,right: 15*X,top: 44*X+T),
               children: <Widget>[
                 _itemView('QuButton',Button()),
                 _itemView('QuSkeleton',Skeleton()),
+                _itemView('QuDialog',MyDialog()),
                 _itemView('QuText',QYText()),
                 _itemView('QuBanner',QYBanner()),
                 _itemView('QuNoNetwork',QYNoNetwork1()),
@@ -83,10 +85,10 @@ class _KitHomePageState extends State<KitHomePage> {
             alignment: Alignment.bottomCenter,
             width: double.maxFinite,
             height: 44*X+T,
-            color: QYColors.theme.withOpacity(0.8),
+            color: QuColors.theme.withOpacity(0.8),
             padding: EdgeInsets.only(bottom: 10*X),
             child: Text('Flutter Qukit',style: TextStyle(
-              color:QYColors.black,
+              color:QuColors.black,
               fontSize: 20*X,
               fontWeight: FontWeight.w800
             ),),
@@ -109,7 +111,7 @@ class _KitHomePageState extends State<KitHomePage> {
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: QYColors.divider,
+              color: QuColors.divider,
               width: 1
             )
           ),
@@ -120,7 +122,7 @@ class _KitHomePageState extends State<KitHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(text,style: TextStyle(
-              color: QYColors.grey,
+              color: QuColors.grey,
               fontWeight: FontWeight.w400,
               fontSize: 17,
             ),),

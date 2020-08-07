@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import '../global/qy_colors.dart';
+import '../global/qu_colors.dart';
 import '../util/qu_screen.dart';
 import 'qy_appbar.dart';
 
@@ -44,7 +44,7 @@ class QYText extends StatelessWidget {
                 maxLines: 10,
                 //最大行数
                 style: new TextStyle(
-                  decorationColor:QYColors.black,
+                  decorationColor:QuColors.black,
                   //线的颜色
                   decoration: TextDecoration.lineThrough,
                   //none无文字装饰   lineThrough删除线   overline文字上面显示线    underline文字下面显示线
@@ -60,7 +60,7 @@ class QYText extends StatelessWidget {
                   //字体大小
                   fontWeight: FontWeight.w600,
                   //字体粗细  粗体和正常
-                  color: QYColors.black, //文字颜色
+                  color: QuColors.black, //文字颜色
                 ),
               ),
             SizedBox(
@@ -76,7 +76,7 @@ class QYText extends StatelessWidget {
                 children:<TextSpan>[
                   TextSpan(
                       text:'了解富文本',
-                      style: TextStyle(color:QYColors.black,),
+                      style: TextStyle(color:QuColors.black,),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         debugPrint("Link Clicked.");
@@ -84,7 +84,7 @@ class QYText extends StatelessWidget {
                   ),
                   TextSpan(
                       text: '了解富文本',
-                      style: TextStyle(color:QYColors.theme,)
+                      style: TextStyle(color:QuColors.theme,)
                   ),
 
                 ],
