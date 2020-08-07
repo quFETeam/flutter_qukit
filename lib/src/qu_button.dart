@@ -33,7 +33,7 @@ class QuButton extends StatelessWidget {
       this.activeTextColor=Colors.white,
       this.disabledTextColor = Colors.white,
       this.text = '按钮',
-      this.textSize = 16,
+      this.textSize = 17,
       this.disabled=false,
       this.active=false,
       this.onTap})

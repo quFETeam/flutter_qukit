@@ -2,9 +2,10 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterqukit/global/qy_colors.dart';
-import 'package:flutterqukit/util/qu_screen.dart';
+import './global/qy_colors.dart';
+import './util/qu_screen.dart';
 import 'example/button.dart';
+import 'example/skeleton.dart';
 import 'example/qy_no_network.dart';
 import 'example/qy_text.dart';
 import 'example/qy_banner.dart';
@@ -69,11 +70,12 @@ class _KitHomePageState extends State<KitHomePage> {
             child: ListView(
               padding: EdgeInsets.only(left: 15*X,right: 15*X,top: 44*X+T),
               children: <Widget>[
-                _itemView('QYButton',Button()),
-                _itemView('QYText',QYText()),
-                _itemView('QYBanner',QYBanner()),
-                _itemView('QYNoNetwork',QYNoNetwork1()),
-                _itemView('QYstate',A()),
+                _itemView('QuButton',Button()),
+                _itemView('QuSkeleton',Skeleton()),
+                _itemView('QuText',QYText()),
+                _itemView('QuBanner',QYBanner()),
+                _itemView('QuNoNetwork',QYNoNetwork1()),
+                _itemView('Qustate',A()),
               ],
             ),
           ),

@@ -1,50 +1,11 @@
 import 'package:flutter/material.dart';
-import '../global/qy_colors.dart';
-import '../util/qu_screen.dart';
-import 'qy_appbar.dart';
-/*
-本篇介绍的是 app中常见的骨架loading，
-还有几个常见的布局
-* */
-class QYSkeleton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(child: QYAppBar(
-        title: 'QYSkeleton',
-      ), preferredSize: Size.fromHeight(44)),
-      body: Column(
-        children: <Widget>[
-
-        ],
-      ),
-    );
-  }
- Widget _imgTextIcon(X){
-    return Container(
-      width: double.maxFinite,
-      child: Row(
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-
-            ],
-          ),
-          Container(
-            height: 16*X,width: 10*X,
-            child: Image.asset('lib/images/next_page.png',fit: BoxFit.fill,),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 
 const int _kDefaultMS = 1000;
+
 enum SkeletonAnimationType { shimmer, stretch }
-class Skeleton extends StatefulWidget {
-  Skeleton(
+
+class QuSkeleton extends StatefulWidget {
+  QuSkeleton(
       {Key key,
         this.shape,
         this.padding,
@@ -70,21 +31,21 @@ class Skeleton extends StatefulWidget {
   final BorderRadiusGeometry borderRadius;
   final Duration duration;
 
-  /// Show animation or not, default is true.
+  /// 是否显示动画
   final bool active;
 
-  /// The animation type of the skeleton, default is [FLSkeletonAnimationType.shimmer].
-  /// If you specify [FLSkeletonAnimationType.stretch] type, you must set [width] and [stretchWidth].
+  /// 动画类型, 默认使用 [FLSkeletonAnimationType.shimmer].
+  /// 如果使用 [FLSkeletonAnimationType.stretch] 必须设置 [width] 和 [stretchWidth].
   final SkeletonAnimationType type;
 
-  /// The 'animate to' width when choose [FLSkeletonAnimationType.stretch] type.
+  /// 选择 [FLSkeletonAnimationType.stretch] 类型是设置.
   final double stretchWidth;
 
   @override
-  State<Skeleton> createState() => _SkeletonState();
+  State<QuSkeleton> createState() => _QuSkeletonState();
 }
 
-class _SkeletonState extends State<Skeleton>
+class _QuSkeletonState extends State<QuSkeleton>
     with SingleTickerProviderStateMixin {
   Animation<double> _animation;
   AnimationController _controller;
@@ -99,7 +60,7 @@ class _SkeletonState extends State<Skeleton>
   }
 
   @override
-  void didUpdateWidget(Skeleton oldWidget) {
+  void didUpdateWidget(QuSkeleton oldWidget) {
     super.didUpdateWidget(oldWidget);
     _setupAnimationAndStart();
   }

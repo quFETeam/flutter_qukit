@@ -19,7 +19,7 @@ class Button extends StatelessWidget {
       backgroundColor: QYColors.backgroundColor,
       appBar: PreferredSize(
           child: QYAppBar(
-            title: 'QYButton',
+            title: 'QuButton',
           ),
           preferredSize: Size.fromHeight(44)),
       body: Container(
