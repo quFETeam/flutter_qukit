@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import '../global/qu_colors.dart';
+import '../constants/qu_colors.dart';
 import '../util/qu_screen.dart';
 import 'qy_appbar.dart';
 

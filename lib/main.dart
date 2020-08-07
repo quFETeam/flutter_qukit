@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './global/qu_colors.dart';
+import './constants/qu_colors.dart';
 import './util/qu_screen.dart';
 import 'example/button.dart';
 import 'example/skeleton.dart';

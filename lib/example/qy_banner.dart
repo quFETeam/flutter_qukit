@@ -3,7 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import '../util/qu_screen.dart';
-import '../global/qu_colors.dart';
+import '../constants/qu_colors.dart';
 import 'qy_appbar.dart';
 
 /*

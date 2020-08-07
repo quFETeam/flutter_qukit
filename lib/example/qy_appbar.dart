@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../global/qu_colors.dart';
+import '../constants/qu_colors.dart';
 import '../util/qu_screen.dart';
 /*
 * 本片封装的appBar 开发时发现没个页面的appBar差不多一样，

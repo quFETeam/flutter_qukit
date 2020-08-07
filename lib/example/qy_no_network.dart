@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:connectivity/connectivity.dart';
-import '../global/qu_colors.dart';
+import '../constants/qu_colors.dart';
 import 'qy_appbar.dart';
 
 class QYNoNetwork1 extends StatelessWidget {

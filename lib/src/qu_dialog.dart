@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../util/qu_screen.dart';
-import '../global/qu_colors.dart';
+import '../constants/qu_colors.dart';
 import 'qu_button.dart';
 
 class QuDialog extends StatelessWidget {

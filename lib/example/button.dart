@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../global/qu_colors.dart';
+import '../constants/qu_colors.dart';
 import '../util/qu_screen.dart';
 import '../src/qu_button.dart';
 import 'qy_appbar.dart';
