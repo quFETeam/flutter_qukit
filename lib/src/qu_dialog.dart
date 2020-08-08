@@ -33,7 +33,6 @@ class QuDialog extends StatelessWidget {
       this.onConfirmTap})
       : super(key: key);
 
-
   _onCancelTap(context){
     if(onCancelTap==null){
       Navigator.pop(context);
@@ -56,7 +55,7 @@ class QuDialog extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            color: QuColors.popBakColor,
+            color: QuColors.popBgColor,
             child: InkWell(
               onTap: canClose?() {
                 Navigator.pop(context);
@@ -73,7 +72,19 @@ class QuDialog extends StatelessWidget {
     );
   }
 
-  //页面上的UI
+  Widget _title(X){
+    return showTitle? Container(
+      margin: EdgeInsets.only(bottom: 20 * X),
+      child: Text(
+        title,
+        style: TextStyle(
+            color: QuColors.fontPrimaryColor,
+            fontSize: 17 * X),
+      ),
+    ): Container();
+  }
+
+  //页面UI
   Widget _viewUI(X, context) {
     return Container(
       decoration: BoxDecoration(
@@ -88,21 +99,12 @@ class QuDialog extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                showTitle
-                    ? Container(
-                        margin: EdgeInsets.only(bottom: 20 * X),
-                        child: Text(
-                          title,
-                          style: TextStyle(
-                              color: QuColors.fontPrimaryColor,
-                              fontSize: 17 * X),
-                        ),
-                      )
-                    : Container(),
+                _title(X),
                 Text(
                   content,
                   style: TextStyle(
                       color: QuColors.fontPrimaryColor, fontSize: 15 * X),
+                  textAlign: TextAlign.center,
                 ),
               ],
             ),

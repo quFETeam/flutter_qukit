@@ -75,6 +75,33 @@ class Button extends StatelessWidget {
             SizedBox(
               height: 10 * X,
             ),
+            QuButton(
+              //inline Button
+                borderRadius: 1.5,
+                letterSpacing:0.5,
+                borderColor: Color(0xFFD8D8D8),
+                borderWidth: 0.5,
+                primaryColor: Colors.white,
+                textColor: QuColors.fontPrimaryColor,
+                onTap: _onTap),
+            SizedBox(
+              height: 10 * X,
+            ),
+            QuButton(
+              //inline Button
+                borderRadius: 1.5,
+                active: true,
+                letterSpacing:0.5,
+                activeTextColor: Color(0xFFBB3A24),
+                activeColor: Colors.white,
+                borderColor: Color(0xFFD8D8D8),
+                activeBorderColor: Color(0xFFBB3A24),
+                borderWidth: 0.5,
+                primaryColor: Colors.white,
+                onTap: _onTap),
+            SizedBox(
+              height: 10 * X,
+            ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               QuButton(
                   //设置宽

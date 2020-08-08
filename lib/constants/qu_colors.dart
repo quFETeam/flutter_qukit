@@ -11,7 +11,7 @@ class QuColors{
   //btnColor
   static Color btnDisabledColor = Color(0xFFF8F8F8);
   //弹窗背景色
-  static Color popBakColor = Color(0x80000000);
+  static Color popBgColor = Color(0x80000000);
   //黑色
   static Color black = Color(0xFF333333);
 
