@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:connectivity/connectivity.dart';
 import '../constants/qu_colors.dart';
-import 'qy_appbar.dart';
+import '../src/qu_appbar.dart';
 
-class QYNoNetwork1 extends StatelessWidget {
+class QuNoNetwork1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: PreferredSize(child: QYAppBar(
-        title: 'QYNoNetwork',
+      appBar: PreferredSize(child: QuAppBar(
+        title: 'quNoNetwork',
       ), preferredSize:Size.fromHeight(44)),
       body:OfflineBuilder(
       debounceDuration: Duration.zero,
@@ -39,12 +39,12 @@ class QYNoNetwork1 extends StatelessWidget {
   }
 }
 
-class QYNoNetwork2 extends StatefulWidget {
+class quNoNetwork2 extends StatefulWidget {
   @override
-  _QYNoNetwork2State createState() => _QYNoNetwork2State();
+  _quNoNetwork2State createState() => _quNoNetwork2State();
 }
 
-class _QYNoNetwork2State extends State<QYNoNetwork2> {
+class _quNoNetwork2State extends State<quNoNetwork2> {
   @override
   void initState(){
     _isConnected();
@@ -69,8 +69,8 @@ class _QYNoNetwork2State extends State<QYNoNetwork2> {
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: PreferredSize(child: QYAppBar(
-          title: 'QYNoNetwork',
+        appBar: PreferredSize(child: QuAppBar(
+          title: 'quNoNetwork',
         ), preferredSize:Size.fromHeight(44)),
         body: Center(
           child: Text(_isHaveNetwork?'有网':'无网'),

@@ -4,17 +4,17 @@ import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import '../util/qu_screen.dart';
 import '../constants/qu_colors.dart';
-import 'qy_appbar.dart';
+import '../src/qu_appbar.dart';
 
 /*
 本篇用到的插件 flutter_swiper: ^1.1.6 和 photo_view: ^0.9.2
 * */
-class QYBanner extends StatelessWidget {
+class QuBanner extends StatelessWidget {
   final List imgList = [
-    'lib/images/wuming_02.png',
-    'lib/images/wuming_03.png',
-    'lib/images/wuming_04.png',
-    'lib/images/wuming_05.png',
+    'lib/images/wuming_cross1.png',
+    'lib/images/wuming_cross2.png',
+    'lib/images/wuming_cross3.png',
+    'lib/images/wuming_cross4.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,8 @@ class QYBanner extends StatelessWidget {
    return Scaffold(
      backgroundColor: QuColors.backgroundColor,
       appBar: PreferredSize(
-          child: QYAppBar(
-            title: 'QYBanner',
+          child: QuAppBar(
+            title: 'quBanner',
           ), preferredSize: Size.fromHeight(44)),
       body:Column(
         children: <Widget>[

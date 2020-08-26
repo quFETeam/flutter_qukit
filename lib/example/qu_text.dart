@@ -2,12 +2,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../constants/qu_colors.dart';
 import '../util/qu_screen.dart';
-import 'qy_appbar.dart';
+import '../src/qu_appbar.dart';
 
 /*
 * 本篇记录的是flutter开发中"text"的一些属性和一些用法和富文本""的使用
 * */
-class QYText extends StatelessWidget {
+class QuText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double X = QuScreen.X(context);
@@ -22,8 +22,8 @@ class QYText extends StatelessWidget {
     print(sz.width);
     return Scaffold(
       appBar: PreferredSize(
-          child: QYAppBar(
-            title: 'QYText',
+          child: QuAppBar(
+            title: 'quText',
           ),
           preferredSize: Size.fromHeight(44)),
       body: ListView(

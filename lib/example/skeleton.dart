@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'qy_appbar.dart';
+import '../src/qu_appbar.dart';
 import '../src/qu_skeleton.dart';
 /*
 本篇介绍的是 骨架屏使用，
@@ -8,7 +8,7 @@ class Skeleton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(child: QYAppBar(
+      appBar: PreferredSize(child: QuAppBar(
         title: 'QuSkeleton',
       ), preferredSize: Size.fromHeight(44)),
       body: Column(

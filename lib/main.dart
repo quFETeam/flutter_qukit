@@ -7,10 +7,14 @@ import './util/qu_screen.dart';
 import 'example/button.dart';
 import 'example/skeleton.dart';
 import 'example/my_dialog.dart';
-import 'example/qy_no_network.dart';
-import 'example/qy_text.dart';
-import 'example/qy_banner.dart';
+import 'example/qu_no_network.dart';
+import 'example/qu_text.dart';
+import 'example/qu_banner.dart';
 import 'example/state.dart';
+import 'example/qu_bottom_drawer.dart';
+import 'example/qu_turn_page_atlas.dart';
+import 'example/qu_well_received.dart';
+
 void main() {
   runApp(KitApp());
   //强制竖屏
@@ -31,6 +35,7 @@ class KitApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'flutter qukit',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
@@ -60,24 +65,27 @@ class _KitHomePageState extends State<KitHomePage> {
             decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.fitWidth,
-                  image: AssetImage('lib/images/qy_logo.jpg'),
+                  image: AssetImage('lib/images/qu_logo.jpg'),
                 )
             ),
           ),
           Container(
             width: double.maxFinite,
             height: double.maxFinite,
-            color: QuColors.white.withOpacity(0.8),
+            color: QuColors.white.withOpacity(0.95),
             child: ListView(
               padding: EdgeInsets.only(left: 15*X,right: 15*X,top: 44*X+T),
               children: <Widget>[
                 _itemView('QuButton',Button()),
                 _itemView('QuSkeleton',Skeleton()),
                 _itemView('QuDialog',MyDialog()),
-                _itemView('QuText',QYText()),
-                _itemView('QuBanner',QYBanner()),
-                _itemView('QuNoNetwork',QYNoNetwork1()),
+                _itemView('QuText',QuText()),
+                _itemView('QuBanner',QuBanner()),
+                _itemView('QuNoNetwork',QuNoNetwork1()),
                 _itemView('Qustate',A()),
+                _itemView('QuBottomDrawer',QuBottomDrawer()),
+                _itemView('QuTurnPageAtlas',QuTurnPageAtlas()),
+                _itemView('QuWellReceived',QuWellReceived()),
               ],
             ),
           ),

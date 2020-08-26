@@ -5,18 +5,18 @@ import '../util/qu_screen.dart';
 * 本片封装的appBar 开发时发现没个页面的appBar差不多一样，
 * 用法:
 * appBar: PreferredSize(
-          child: QYAppBar(
-            title: 'QYButton',
+          child: quAppBar(
+            title: 'quButton',
           ),
           preferredSize:Size.fromHeight(44)),
 * */
-class QYAppBar extends StatelessWidget {
+class QuAppBar extends StatelessWidget {
   final String title; //标题
   final bool bottomColor;//底部的边
   final bool isCenterTitle;//是否居中
   final bool haveLeftButton;//是否有左侧的返回小图标
   final Color appBarColor;//appBarr的背景色
-  QYAppBar({Key key,
+  QuAppBar({Key key,
     this.title='',
     this.bottomColor=true,
     this.isCenterTitle=true,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'qy_appbar.dart';
+import '../src/qu_appbar.dart';
 import '../util/qu_screen.dart';
 import '../util/qu_pop_route.dart';
 import '../src/qu_button.dart';
@@ -29,7 +29,7 @@ class MyDialog extends StatelessWidget {
     double X = QuScreen.X(context);
     return Scaffold(
         appBar: PreferredSize(
-            child: QYAppBar(
+            child: QuAppBar(
               title: 'QuDialog',
             ),
             preferredSize: Size.fromHeight(44)),

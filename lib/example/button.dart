@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants/qu_colors.dart';
 import '../util/qu_screen.dart';
 import '../src/qu_button.dart';
-import 'qy_appbar.dart';
+import '../src/qu_appbar.dart';
 
 /*
   按钮demo
@@ -18,7 +18,7 @@ class Button extends StatelessWidget {
     return Scaffold(
       backgroundColor: QuColors.backgroundColor,
       appBar: PreferredSize(
-          child: QYAppBar(
+          child: QuAppBar(
             title: 'QuButton',
           ),
           preferredSize: Size.fromHeight(44)),
