@@ -13,17 +13,24 @@ import 'example/state.dart';
 import 'example/qu_bottom_drawer.dart';
 import 'example/qu_turn_page_atlas.dart';
 import 'example/qu_well_received.dart';
+import 'example/qu_verification_code.dart';
+import 'example/qu_sand_able.dart';
+import 'example/qu_bottom_sheet.dart';
 
 void main() {
   runApp(KitApp());
   //强制竖屏
   SystemChrome.setPreferredOrientations([
+    //强制竖屏
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown
   ]);
   if (Platform.isAndroid) {
     SystemUiOverlayStyle systemUiOverlayStyle =
-    SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light,
+    );
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }
 }
@@ -35,8 +42,9 @@ class KitApp extends StatelessWidget {
     return MaterialApp(
       title: 'flutter qukit',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
+      theme: Theme.of(context).copyWith(
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
       ),
       home: KitHomePage(),
     );
@@ -84,6 +92,9 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuBottomDrawer',QuBottomDrawer()),
                 _itemView('QuTurnPageAtlas',QuTurnPageAtlas()),
                 _itemView('QuWellReceived',QuWellReceived()),
+                _itemView('QuVerificationCode',QuVerificationCodeExample()),
+                _itemView('QuSandAble',QuSandAbleExample()),
+                _itemView('QuBottomSheet',QuBottomSheetExample()),
               ],
             ),
           ),
