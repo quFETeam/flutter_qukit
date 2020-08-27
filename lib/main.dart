@@ -8,7 +8,6 @@ import 'example/button.dart';
 import 'example/skeleton.dart';
 import 'example/my_dialog.dart';
 import 'example/qu_no_network.dart';
-import 'example/qu_text.dart';
 import 'example/qu_banner.dart';
 import 'example/state.dart';
 import 'example/qu_bottom_drawer.dart';
@@ -79,8 +78,7 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuButton',Button()),
                 _itemView('QuSkeleton',Skeleton()),
                 _itemView('QuDialog',MyDialog()),
-                _itemView('QuText',QuText()),
-                _itemView('QuBanner',QuBanner()),
+                _itemView('QuBanner',QuBannerExample()),
                 _itemView('QuNoNetwork',QuNoNetwork1()),
                 _itemView('Qustate',A()),
                 _itemView('QuBottomDrawer',QuBottomDrawer()),

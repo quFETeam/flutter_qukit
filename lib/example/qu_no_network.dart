@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:connectivity/connectivity.dart';
 import '../constants/qu_colors.dart';
-import '../src/qu_appbar.dart';
+import '../src/qu_scaffold.dart';
 
 class QuNoNetwork1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: PreferredSize(child: QuAppBar(
-        title: 'quNoNetwork',
-      ), preferredSize:Size.fromHeight(44)),
-      body:OfflineBuilder(
+    return QuScaffold(
+      title: 'QuNoNetwork', body: OfflineBuilder(
       debounceDuration: Duration.zero,
       connectivityBuilder: (
           BuildContext context,
@@ -34,17 +31,16 @@ class QuNoNetwork1 extends StatelessWidget {
        child: Center(
         child:Text('现在是有网状态下的UI，\n有延迟是因为手机联网'),
       ),
-    ),
-    );
+    ));
   }
 }
 
-class quNoNetwork2 extends StatefulWidget {
+class QuNoNetwork2 extends StatefulWidget {
   @override
-  _quNoNetwork2State createState() => _quNoNetwork2State();
+  _QuNoNetwork2State createState() => _QuNoNetwork2State();
 }
 
-class _quNoNetwork2State extends State<quNoNetwork2> {
+class _QuNoNetwork2State extends State<QuNoNetwork2> {
   @override
   void initState(){
     _isConnected();
@@ -68,14 +64,11 @@ class _quNoNetwork2State extends State<quNoNetwork2> {
   }
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-        appBar: PreferredSize(child: QuAppBar(
-          title: 'quNoNetwork',
-        ), preferredSize:Size.fromHeight(44)),
+      return QuScaffold(
+        title:'QuNoNetwork',
         body: Center(
-          child: Text(_isHaveNetwork?'有网':'无网'),
-        ),
+         child: Text(_isHaveNetwork?'有网':'无网'),
+       ),
       );
     }
-
   }
