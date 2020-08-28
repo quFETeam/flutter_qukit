@@ -63,7 +63,7 @@ class QuDialog extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 43 * X,
+            left: 37.5 * X,
             top: 293.5 * X,
             child: _viewUI(X, context),
           ),
