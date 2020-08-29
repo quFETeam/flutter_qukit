@@ -25,7 +25,7 @@ class _QuWellReceivedState extends State<QuWellReceived> {
               height: 150*X,
             ),
             QuCoverBlur(
-              sigma: 8,
+              sigma: double.parse(ratingValue),
               image: AssetImage(
                 'lib/images/wuming_cross2.png',
               ),

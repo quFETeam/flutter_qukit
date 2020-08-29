@@ -4,7 +4,8 @@ import '../constants/qu_colors.dart';
 import '../src/qu_tab_indicator.dart';
 /*
 *本页介绍的是指示器圆角的封装（tab_bar的属性没有相关属性）。
-* 介绍一种解决当选中和未选中的tab的大小不一样时候的抖动问题
+* 介绍一种解决当选中和未选中的tab的大小不一样时候的抖动问题,
+* 缺点是不是实时变化的
 * */
 
 class QuTabIndicatorExample extends StatefulWidget {
