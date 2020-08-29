@@ -18,6 +18,8 @@ import 'example/qu_sand_able.dart';
 import 'example/qu_bottom_sheet.dart';
 import 'example/qu_gaussian_blur.dart';
 import 'example/qu_flexible_text.dart';
+import 'example/qu_dynamic_appbar.dart';
+import 'example/qu_tab_indicator.dart';
 
 void main() {
   runApp(KitApp());
@@ -99,6 +101,8 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuBottomSheet',QuBottomSheetExample()),
                 _itemView('QuGaussianBlur',QuGaussianBlur()),
                 _itemView('QuFlexibleTex',QuFlexibleTextExample()),
+                _itemView('QuDynamicAppbar',QuDynamicAppbarExample()),
+                _itemView('QuTabIndicator',QuTabIndicatorExample()),
               ],
             ),
           ),
