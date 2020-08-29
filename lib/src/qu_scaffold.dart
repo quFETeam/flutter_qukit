@@ -54,7 +54,7 @@ class QuScaffold extends StatelessWidget {
                   },
                   child:Container(
                     color: appBarColor,
-                    padding: EdgeInsets.all(13.5),
+                    padding: EdgeInsets.fromLTRB(6.5,13.5,20.5,13.5),
                     child: Image.asset('lib/images/bar_back.png'),
                   )
               ):null,

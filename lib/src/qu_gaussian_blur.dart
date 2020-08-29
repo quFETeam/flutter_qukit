@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutterqukit/util/qu_screen.dart';
 
 class QuBlurOval extends StatelessWidget {
   final Widget widget;
@@ -34,7 +33,6 @@ class QuBlurRect extends StatelessWidget {
   final double padding;
   final double sigma;
   final double width;
-
   const QuBlurRect({
     Key key,
     @required this.widget,
@@ -66,38 +64,49 @@ class QuBlurRect extends StatelessWidget {
 }
 
 class QuCoverBlur extends StatelessWidget {
-  final Widget bottomWidget;
-  final Widget topWidget;
-  final double sigma;
+  final ImageProvider image;//背景图片网络图片还是本地图片自定义
+  final double imgH; //图片的高
+  final double imgW;//图片的宽
+  final Widget topWidget;//模糊容器内的UI
+  final double sigma; //模糊程度
+  final double doubleRadius;//模糊容器的圆角
 
   QuCoverBlur({Key key,
-    @required this.bottomWidget,
+    @required this.image,
     @required this.topWidget,
-    this.sigma = 15})
+    this.sigma = 15,
+    this.doubleRadius = 10.0,
+    this.imgH,
+    this.imgW})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double X = QuScreen.X(context);
     return Container(
-      child: Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          bottomWidget,
-          Positioned.fill(
-            child:BackdropFilter(
+        width: imgW,
+        height: imgH,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(doubleRadius),
+          image: DecorationImage(
+            image: image,
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(doubleRadius)),
+            child: BackdropFilter(
               filter: ImageFilter.blur(
                 sigmaX: sigma,
                 sigmaY: sigma,
               ),
               child: Container(
+                width: imgW,
+                height: imgH,
                 color: Colors.transparent,
+                 child:topWidget,
               ),
-            ),
-          ),
-          topWidget,
-        ],
-      ),
+            )
+        )
     );
   }
 }

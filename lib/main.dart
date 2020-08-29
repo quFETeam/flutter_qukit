@@ -17,6 +17,7 @@ import 'example/qu_verification_code.dart';
 import 'example/qu_sand_able.dart';
 import 'example/qu_bottom_sheet.dart';
 import 'example/qu_gaussian_blur.dart';
+import 'example/qu_flexible_text.dart';
 
 void main() {
   runApp(KitApp());
@@ -97,6 +98,7 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuSandAble',QuSandAbleExample()),
                 _itemView('QuBottomSheet',QuBottomSheetExample()),
                 _itemView('QuGaussianBlur',QuGaussianBlur()),
+                _itemView('QuFlexibleTex',QuFlexibleTextExample()),
               ],
             ),
           ),
