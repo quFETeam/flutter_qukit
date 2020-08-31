@@ -7,15 +7,6 @@ import '../src/qu_dynamic_appbar.dart';
 * */
 
 class QuDynamicAppbarExample extends StatelessWidget {
-  static List imgList = [
-    'lib/images/wuming_vertical1.jpg',
-    'lib/images/wuming_vertical2.jpg',
-    'lib/images/wuming_vertical3.jpg',
-    'lib/images/wuming_vertical4.jpg',
-    'lib/images/wuming_vertical5.jpg',
-    'lib/images/wuming_vertical6.jpg',
-    'lib/images/wuming_vertical7.jpg',
-  ];
   @override
   Widget build(BuildContext context) {
     double X = QuScreen.X(context);
@@ -23,12 +14,14 @@ class QuDynamicAppbarExample extends StatelessWidget {
       backgroundColor: QuColors.white,
       title: 'QuDynamicAppbarExample',
       bodyWidget: ListView.builder(
-          itemCount: imgList.length,
+          itemCount: 20,
           itemBuilder: (BuildContext context, int index) {
             return Container(
+              alignment: Alignment.center,
+              height: 50*X,
               margin: EdgeInsets.all(14*X),
               width: double.maxFinite,
-              child: Image.asset(imgList[index],fit: BoxFit.fitHeight,),
+              child:Text('重点是顶部的导航bar！'),
             );
           }),
     );

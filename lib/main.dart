@@ -20,6 +20,8 @@ import 'example/qu_gaussian_blur.dart';
 import 'example/qu_flexible_text.dart';
 import 'example/qu_dynamic_appbar.dart';
 import 'example/qu_tab_indicator.dart';
+import 'example/qu_left_sd.dart';
+import 'example/qu_input_box.dart';
 
 void main() {
   runApp(KitApp());
@@ -40,7 +42,6 @@ void main() {
 }
 
 class KitApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -103,6 +104,8 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuFlexibleTex',QuFlexibleTextExample()),
                 _itemView('QuDynamicAppbar',QuDynamicAppbarExample()),
                 _itemView('QuTabIndicator',QuTabIndicatorExample()),
+                _itemView('QuLeftSD',QuLeftSDExample()),
+                _itemView('QuInputBox', QuInputBoxExample())
               ],
             ),
           ),

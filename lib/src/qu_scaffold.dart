@@ -16,6 +16,7 @@ class QuScaffold extends StatelessWidget {
   final bool haveLeftButton;//是否有左侧的返回小图标
   final Color appBarColor;//appbar的颜色
   final Color backgroundColor;//页面背景色
+  final bool haveInputPadding;
   final Widget body;
   const QuScaffold({Key key,
     this.bottomColor=true,
@@ -23,6 +24,7 @@ class QuScaffold extends StatelessWidget {
     this.haveLeftButton=true,
     this.appBarColor = Colors.white,
     this.backgroundColor =Colors.white,
+    this.haveInputPadding = false,
     @required this.title,
     @required this.body,
   }) : super(key: key);//appBarr的背景色
@@ -30,6 +32,7 @@ class QuScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     double X =QuScreen.X(context);
     return Scaffold(
+      resizeToAvoidBottomPadding: haveInputPadding,
       backgroundColor: backgroundColor,
       appBar: PreferredSize(
           child: Container(
