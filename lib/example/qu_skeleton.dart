@@ -6,12 +6,12 @@ import '../util/qu_screen.dart';
 /*
 本篇介绍的是 骨架屏使用，
 * */
-class Skeleton extends StatelessWidget {
+class QuSkeletonExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double X = QuScreen.X(context);
     return QuScaffold(
-      title: 'QuSkeleton',
+      title: 'QuSkeletonExample',
       body: Column(
         children: <Widget>[
         SizedBox(

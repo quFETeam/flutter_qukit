@@ -53,6 +53,7 @@ class OneLineInput extends StatelessWidget {
   final int maxWord;
   final double horizontal;
   final double height;
+  final Color textColor;
   OneLineInput({
     Key key,
     @required this.textEditingController,
@@ -61,6 +62,7 @@ class OneLineInput extends StatelessWidget {
     this.maxWord=32,
     this.horizontal=15,
     this.height=44,
+    this.textColor = Colors.white
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -82,7 +84,7 @@ class OneLineInput extends StatelessWidget {
           left: 22.5*X,bottom: -3*X,
           child:InputBox(
             function:function ,
-            textColor: QuColors.white,
+            textColor: textColor,
             textInputType: TextInputType.text,
             hintText: hintText,
             maxLine: 1,

@@ -28,7 +28,7 @@ class QuButton extends StatelessWidget {
       this.letterSpacing=0,
       this.borderRadius = 2,
       this.borderWidth = 0,
-      this.primaryColor = Colors.yellow,
+      this.primaryColor = Colors.amber,
       this.disabledColor = Colors.grey,
       this.activeColor = Colors.blue,
       this.borderColor = Colors.white,

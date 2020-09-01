@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import './constants/qu_colors.dart';
 import './util/qu_screen.dart';
 import 'example/button.dart';
-import 'example/skeleton.dart';
+import 'example/qu_skeleton.dart';
 import 'example/my_dialog.dart';
 import 'example/qu_no_network.dart';
 import 'example/qu_banner.dart';
@@ -22,6 +22,8 @@ import 'example/qu_dynamic_appbar.dart';
 import 'example/qu_tab_indicator.dart';
 import 'example/qu_left_sd.dart';
 import 'example/qu_input_box.dart';
+import 'example/qu_animation_icon.dart';
+import 'example/qu_page_route.dart';
 
 void main() {
   runApp(KitApp());
@@ -89,7 +91,7 @@ class _KitHomePageState extends State<KitHomePage> {
               padding: EdgeInsets.only(left: 15*X,right: 15*X,top: 44*X+T),
               children: <Widget>[
                 _itemView('QuButton',Button()),
-                _itemView('QuSkeleton',Skeleton()),
+                _itemView('QuSkeleton',QuSkeletonExample()),
                 _itemView('QuDialog',MyDialog()),
                 _itemView('QuBanner',QuBannerExample()),
                 _itemView('QuNoNetwork',QuNoNetwork1()),
@@ -105,7 +107,9 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuDynamicAppbar',QuDynamicAppbarExample()),
                 _itemView('QuTabIndicator',QuTabIndicatorExample()),
                 _itemView('QuLeftSD',QuLeftSDExample()),
-                _itemView('QuInputBox', QuInputBoxExample())
+                _itemView('QuInputBox', QuInputBoxExample()),
+                _itemView('QuAnimationIcon', QuAnimationIconExample()),
+                _itemView('QuPageRoute', QuPageRouteExample()),
               ],
             ),
           ),
