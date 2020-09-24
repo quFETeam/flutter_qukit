@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import './constants/qu_colors.dart';
 import './util/qu_screen.dart';
 import 'example/button.dart';
+import 'example/qu_list.dart';
 import 'example/qu_skeleton.dart';
 import 'example/my_dialog.dart';
 import 'example/qu_no_network.dart';
@@ -110,6 +111,7 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuInputBox', QuInputBoxExample()),
                 _itemView('QuAnimationIcon', QuAnimationIconExample()),
                 _itemView('QuPageRoute', QuPageRouteExample()),
+                _itemView('QuList', QuList()),
               ],
             ),
           ),
