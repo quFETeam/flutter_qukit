@@ -52,11 +52,21 @@ class _QuTurnPageAtlasState extends State<QuTurnPageAtlas>with TickerProviderSta
   static List imgList = [
     'lib/images/wuming_vertical1.jpg',
     'lib/images/wuming_vertical2.jpg',
-    'lib/images/wuming_vertical3.jpg',
-    'lib/images/wuming_vertical4.jpg',
-    'lib/images/wuming_vertical5.jpg',
-    'lib/images/wuming_vertical6.jpg',
-    'lib/images/wuming_vertical7.jpg',
+    'lib/images/WechatIMG1.jpeg',
+    'lib/images/WechatIMG2.jpeg',
+    'lib/images/WechatIMG3.jpeg',
+    'lib/images/WechatIMG4.jpeg',
+    'lib/images/WechatIMG5.jpeg',
+    'lib/images/WechatIMG6.jpeg',
+    'lib/images/WechatIMG7.jpeg',
+
+//    'lib/images/wuming_vertical1.jpg',
+//    'lib/images/wuming_vertical2.jpg',
+//    'lib/images/wuming_vertical3.jpg',
+//    'lib/images/wuming_vertical4.jpg',
+//    'lib/images/wuming_vertical5.jpg',
+//    'lib/images/wuming_vertical6.jpg',
+//    'lib/images/wuming_vertical7.jpg',
   ];
 
   String image0 = imgList[0];
@@ -75,7 +85,7 @@ class _QuTurnPageAtlasState extends State<QuTurnPageAtlas>with TickerProviderSta
             width: double.maxFinite,
             child: Center(
               child: Text(
-                '无名图集',
+                '翻页图集展览',
                 style: TextStyle(color: QuColors.white, fontSize: 16 * X),
               ),
             ),
