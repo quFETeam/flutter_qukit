@@ -10,6 +10,7 @@ import 'example/qu_skeleton.dart';
 import 'example/my_dialog.dart';
 import 'example/qu_no_network.dart';
 import 'example/qu_banner.dart';
+import 'example/qu_sticky_list.dart';
 import 'example/state.dart';
 import 'example/qu_bottom_drawer.dart';
 import 'example/qu_turn_page_atlas.dart';
@@ -112,6 +113,7 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuAnimationIcon', QuAnimationIconExample()),
                 _itemView('QuPageRoute', QuPageRouteExample()),
                 _itemView('QuList', QuList()),
+                _itemView('QuStickyList', QuStickyList()),
               ],
             ),
           ),
