@@ -58,9 +58,9 @@ class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderSt
     return SliverPersistentHeader(
       pinned: true, //是否固定在顶部
       floating: true,
-      delegate: _SliverAppBarDelegate(
-          minHeight: 50, //收起的高度
-          maxHeight: 50, //展开的最大高度
+      delegate: SliverAppBarDelegate(
+          minHeight: 40, //收起的高度
+          maxHeight: 40, //展开的最大高度
           child: Container(
             padding: EdgeInsets.only(left: 16),
             color: Colors.pink,
@@ -112,22 +112,6 @@ class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderSt
     );
   }
 
-  Widget _buildList() {
-    return SliverList(
-        delegate: SliverChildBuilderDelegate(
-              (context, index) {
-            return Container(
-              height: 50,
-              color: index % 2 == 0 ? Colors.white : Colors.black12,
-              width: double.infinity,
-              alignment: Alignment.center,
-              child: Text("我是第${index}个item"),
-            );
-          },
-          childCount: 30,
-        ));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,15 +122,22 @@ class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderSt
             _buildStickyBar(),
           SliverToBoxAdapter(
             child: Container(
-              width: double.infinity,
-              height: 555,
+              width: double.maxFinite,
+              height: double.maxFinite,
               child: TabBarView(controller: _tabController, children: [
-                Center(
-                  child: Text('X 指示器左右缩进的距离'),
+                ListView(
+                  physics: NeverScrollableScrollPhysics(),//禁止滑动
+                  children: <Widget>[
+                    Text('B 指示器距离底部的距离'),
+                  ],
                 ),
-                Center(
-                  child: Text('B 指示器距离底部的距离'),
+                ListView(
+                  physics: NeverScrollableScrollPhysics(),//禁止滑动
+                  children: <Widget>[
+                    Text('B 指示器距离底部的距离'),
+                  ],
                 ),
+
               ]),
             ),
           )
@@ -155,8 +146,8 @@ class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderSt
         ));
   }
 }
-class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
-  _SliverAppBarDelegate({
+class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
+  SliverAppBarDelegate({
     @required this.minHeight,
     @required this.maxHeight,
     @required this.child,
@@ -178,9 +169,80 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
+  bool shouldRebuild(SliverAppBarDelegate oldDelegate) {
     return maxHeight != oldDelegate.maxHeight ||
         minHeight != oldDelegate.minHeight ||
         child != oldDelegate.child;
   }
 }
+
+
+//import 'package:flutter/material.dart';
+//import '../../global/tv_colors.dart';
+//import '../../util/tv_screen.dart';
+//import 'search_hot.dart';
+//import 'search_tab_bar.dart';
+//import 'serach_top_bar.dart';
+//import 'video_long.dart';
+//import 'video_short.dart';
+//
+//
+//class SearchIndex extends StatefulWidget {
+//  final int tabIndex;
+//
+//  const SearchIndex({Key key, this.tabIndex=0}) : super(key: key);
+//  @override
+//  _SearchIndexState createState() => _SearchIndexState();
+//}
+//
+//class _SearchIndexState extends State<SearchIndex> with SingleTickerProviderStateMixin{
+//  TabController _tabController;
+//  ScrollController _scrollViewController;
+//  @override
+//  void initState() {
+//    _scrollViewController = ScrollController();
+//    _tabController = TabController(vsync: this, length: 2, initialIndex: widget.tabIndex);
+//    super.initState();
+//  }
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    double X = TVScreen.X(context);
+//    double T= TVScreen.X(context);
+//    return Scaffold(
+//      appBar: SearchTopBar(
+//        T:T,
+//      ),
+//      backgroundColor: TVColors.white,
+//      body:  NestedScrollView(
+//        controller: _scrollViewController,
+//        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+//          return <Widget>[
+//            SliverAppBar(
+//                automaticallyImplyLeading: false,
+//                brightness: Brightness.light,
+//                backgroundColor: TVColors.white,
+//                expandedHeight: 225.0 + 50 * X,
+//                pinned: true,
+//                floating: true,
+//                snap:false,
+//                elevation: 0,
+//                flexibleSpace: SearchHot(),
+//                bottom: SearchTabBar(
+//                    tabController: _tabController
+//                )
+//            ),
+//          ];
+//        },
+//        body: TabBarView(
+//          controller: _tabController,
+//          children: <Widget>[
+//            VideoLong(),
+//            VideoShort(),
+//          ],
+//        ),
+//      ),
+//    );
+//  }
+//}
+
