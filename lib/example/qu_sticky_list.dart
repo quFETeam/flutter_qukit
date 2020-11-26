@@ -13,7 +13,7 @@ class QuStickyList extends StatefulWidget {
   _QuStickyListState createState() => _QuStickyListState();
 }
 /*
-  
+
 * */
 class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderStateMixin{
 
