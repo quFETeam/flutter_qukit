@@ -13,7 +13,7 @@ class QuStickyList extends StatefulWidget {
   _QuStickyListState createState() => _QuStickyListState();
 }
 /*
-  
+
 * */
 class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderStateMixin{
 
@@ -139,7 +139,7 @@ class _QuStickyListState extends State<QuStickyList> with SingleTickerProviderSt
           SliverToBoxAdapter(
             child: Container(
               width: double.infinity,
-              height: 555,
+              height: 1000,
               child: TabBarView(controller: _tabController, children: [
                 Center(
                   child: Text('X 指示器左右缩进的距离'),
