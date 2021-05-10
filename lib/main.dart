@@ -96,7 +96,7 @@ class _KitHomePageState extends State<KitHomePage> {
                 _itemView('QuSkeleton',QuSkeletonExample()),
                 _itemView('QuDialog',MyDialog()),
                 _itemView('QuBanner',QuBannerExample()),
-                _itemView('QuNoNetwork',QuNoNetwork1()),
+//                _itemView('QuNoNetwork',QuNoNetwork1()),
                 _itemView('Qustate',A()),
                 _itemView('QuBottomDrawer',QuBottomDrawer()),
                 _itemView('QuTurnPageAtlas',QuTurnPageAtlas()),

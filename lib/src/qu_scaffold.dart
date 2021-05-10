@@ -32,7 +32,7 @@ class QuScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     double X =QuScreen.X(context);
     return Scaffold(
-      resizeToAvoidBottomPadding: haveInputPadding,
+      resizeToAvoidBottomInset: haveInputPadding,
       backgroundColor: backgroundColor,
       appBar: PreferredSize(
           child: Container(

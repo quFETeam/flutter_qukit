@@ -43,7 +43,7 @@ class QuPageRouteExample extends StatelessWidget {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(
                       builder: (_) => NewPage(),
-                      settings: RouteSettings(isInitialRoute: false),//渐变的动画
+                      settings: RouteSettings(),//渐变的动画
                       fullscreenDialog: true,
                     ),
                   );

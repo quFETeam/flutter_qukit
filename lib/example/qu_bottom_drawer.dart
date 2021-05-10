@@ -66,6 +66,7 @@ class _QuBottomDrawerState extends State<QuBottomDrawer> {
   //抽屉里的内容
   Widget _drawerView(X) {
     return ListView.builder(
+        physics: ClampingScrollPhysics(),
         itemCount: 20,
         itemBuilder: (BuildContext context, int index) {
           return Container(
